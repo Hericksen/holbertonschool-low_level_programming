@@ -1,16 +1,13 @@
-#include <stdio.h>
-/*
- *
- * main - Entry point of every C program
- *
- * Description : Calls puts and revieves returned value by puts
- * after his execution
- *
- *
- * Return : Always return 0 to indicate success
- */
+#include <stdio.>
 
+/**
+ * main - Entry point
+ *
+ * Description: Display the sentence "Programming is like building a
+ * multilingual puzzle"
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {puts("\"Programming is like building a multilingual puzzle");
-return (0);  /*Main function*/
+return (0);
 }
