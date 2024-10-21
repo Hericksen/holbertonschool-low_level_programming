@@ -3,22 +3,26 @@
 #include <time.h>
 
 /**
- * main - print if number positive or negative
- * Return : always 0 (success)
+ * main - Entry point
+ * Description: Positive or negative task
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-if(n > 0)
-  printf("%d is positive\n",n);
-
-if(n == 0)
-  printf("%d is zero\n",n);
-  
-if(n < 0 )
-  printf("%d is negative\n",n);
-  
+if (n >  0)
+{
+printf("%d is positive\n", n);
+}
+if (n == 0)
+{
+printf("%d is zero\n", n);
+}
+if (n < 0)
+{
+printf("%d is negative\n", n);
+}
 return (0);
 }
