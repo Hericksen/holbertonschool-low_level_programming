@@ -1,2 +1,2 @@
 # holbertonschool-low_level_programming
-Learning C
+Starting learning C
