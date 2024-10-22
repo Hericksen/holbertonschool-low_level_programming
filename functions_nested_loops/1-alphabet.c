@@ -3,6 +3,7 @@
 /**
 * main - Entry point
 * Return: Always 0(Success)
+* Function: Print the alphabet
 */
 void print_alphabet(void)
 {
