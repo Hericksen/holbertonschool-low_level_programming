@@ -1,25 +1,47 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *
+ * times_table - display the 9 table
 */
 
 void print_times_table(int n)
 {
-	int i, j;
+	int number, multi, product;
 
-	if (n > 15 || n < 0)
+	if(n >=0  && n <= 15)
 	{
-	}
-	else
-	{
-		for (i = 0; i <= n; i++)
+		for (number = 0; number <= n; number++)
 		{
-			for (j = 0; j <= n; j++)
-			{
-				printf("%d", i * j);
+			_putchar('0');
 
+			for (multi = 1; multi <= n; multi++)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				product = number * multi;
+
+				if (product <= 99)
+				{
+					_putchar(' ');
+				}
+				if (product <= 9)
+				{
+					_putchar(' ');
+				}
+
+				if (product >= 100)
+				{
+					_putchar((product / 100) + '0');
+					_putchar(((product /10)) % 10 + '0');
+				}
+				else if (product <= 99 && product >= 10)
+				{
+					_putchar((product /10) + '0');
+				}
+				_putchar((product % 10) + '0');
 			}
+			_putchar('\n');
 		}
 	}
 }
