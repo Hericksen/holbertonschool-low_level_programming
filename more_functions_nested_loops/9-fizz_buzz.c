@@ -1,7 +1,9 @@
 #include "main.h"
 #include "stdio.h"
+
 /**
  * main - entry point
+ * Return: No value needed
 */
 
 int main(void)
@@ -17,7 +19,7 @@ int main(void)
 		else if (i % 3 == 0)
 			printf("Fizz ");
 		else
-			printf("%d ",i);
+			printf("%d ", i);
 	}
 	printf("\n");
 	return (0);
