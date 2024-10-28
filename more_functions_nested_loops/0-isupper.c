@@ -7,7 +7,7 @@
  * Return: 1 if upper, 0 if not
 */
 
-int _isupper (int c)
+int _isupper(int c)
 {
 	if (isupper(c))
 		return (1);
