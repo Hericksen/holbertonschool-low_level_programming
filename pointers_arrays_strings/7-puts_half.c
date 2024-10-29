@@ -2,7 +2,8 @@
 #include "2-strlen.c"
 
 /**
- *
+ * puts_half - prints half of a string
+ * @str: string printed
 */
 
 void puts_half(char *str)
@@ -19,7 +20,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		for (n = (length -1) / 2; n < length; n++)
+		for (n = (length - 1) / 2; n < length - 1; n++)
 		{
 			_putchar(str[i]);
 		}
