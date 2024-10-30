@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *
+ * _strcpy - copy a string into another
+ * @dest: destination string
+ * @src: source string
 */
 
 char *_strcpy(char *dest, char *src)
@@ -15,5 +17,6 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 
+	*dest = '\0';
 	return (dest_start);
 }
