@@ -1,20 +1,26 @@
 #include "main.h"
-#include "2-strlen.c"
 
 /**
- *
+ * _strcat - concatenates two strings
+ * @dest: destination string
+ * @src: source string
+ * Return: return the resulting string
 */
 
 
 char *_strcat(char *dest, char *src)
 {
-	int i,  length = _strlen(src);
+	char *result = dest;
 
-	for (i = 0; i < length && src[i] != '\0'; i++)
+	while (*dest != '\0') /*Move to the end of dest string*/
+		dest++;
+
+	while (*src != '\0')
 	{
-		dest[length + i] = src[i];
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	dest[length + i] = '\0';
-	_putchar('\n');
-	return dest;
+	*dest = '\0';
+	return (result);
 }
