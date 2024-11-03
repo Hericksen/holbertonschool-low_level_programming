@@ -4,7 +4,7 @@
 /**
  * _atoi - convert a string into an int
  * @str: string converted
- * Return: the result of checked number
+ * Return: the result of the sign of the number
 */
 
 int _atoi(char *str)
@@ -25,5 +25,5 @@ int _atoi(char *str)
 		str++;
 	}
 
-	return (result);
+	return (result * sign);
 }
