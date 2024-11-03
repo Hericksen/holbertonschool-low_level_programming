@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *
+ * leet - transform a string into leet mode
+ * @str: string changed
+ * Return: value of str
 */
 char *leet(char *str)
 {
@@ -19,9 +21,9 @@ char *leet(char *str)
 	leet['l'] = '1';
 	leet['L'] = '1';
 
-    for (i = 0; str[i] != '\0'; i++)
-	    if (leet[(unsigned char)str[i]])
-		    str[i] = leet[(unsigned char)str[i]];
+	for (i = 0; str[i] != '\0'; i++)
+		if (leet[(unsigned char)str[i]])
+			str[i] = leet[(unsigned char)str[i]];
 
-    return str;
+	return (str);
 }
