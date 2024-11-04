@@ -1,27 +1,28 @@
 #include "main.h"
 
 /**
- *
+ * _strspn -
+ * @s:
+ * @accept:
 */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int nb;
-	char *p;
+	int i, j;
+	unsigned int nb = 0;
 
-	while (*s != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (p = accept; *p != '\0'; p++)
+		for (j = 0; accept[j] != 0; j++)
 		{
-			if (*s == *p)
+			if (s[i] == accept[j])
 			{
 				nb++;
 				break;
 			}
 		}
-		if (*s != *p)
+		if (s[i] != accept[j])
 			return (nb);
-		s++;
 	}
 
 	return (nb);
