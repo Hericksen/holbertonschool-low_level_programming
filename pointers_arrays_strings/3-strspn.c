@@ -9,9 +9,9 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int nb;
 	char *p;
 
-	while (*s)
+	while (*s != '\0')
 	{
-		for (p = accept; *p; p++)
+		for (p = accept; *p != '\0'; p++)
 		{
 			if (*s == *p)
 			{
@@ -19,8 +19,8 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (*p == '\0')
-			break;
+		if (*s != *p)
+			return (nb);
 		s++;
 	}
 
