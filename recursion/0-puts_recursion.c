@@ -1,11 +1,9 @@
 #include "main.h"
-
 /**
  * _puts_recursion - print puts with recursion
  * @s: string source
  * Return: void
  */
-
 void _puts_recursion(char *s)
 {
     if (*s == '\0')
