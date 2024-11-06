@@ -2,7 +2,7 @@
 
 
 /**
- *  - Makes possible to evaluate from 1 to n
+ *  root_square - Makes possible to evaluate from 1 to n
  * @a: same number as n
  * @b: number that iterates from 1 to n
  * Return: On success 1, on error, -1 is returned
