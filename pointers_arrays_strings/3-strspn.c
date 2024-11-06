@@ -4,6 +4,7 @@
  * _strspn - gets the length of a prefix substring.
  * @s: string tested
  * @accept: substring
+ * Return: the nb string
 */
 
 unsigned int _strspn(char *s, char *accept)
