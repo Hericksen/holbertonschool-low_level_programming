@@ -18,9 +18,10 @@ int root_square(int a, int b)
 /**
  * _sqrt_recursion - returns the natural square root of n
  * @n: Number Integer
- * Return: On success 1, on error, -1 is returned.
+ * Return: The root number
  */
 int _sqrt_recursion(int n)
 {
 	return (root_square(n, 1));
 }
+
