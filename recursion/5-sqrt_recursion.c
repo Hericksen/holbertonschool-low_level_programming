@@ -26,7 +26,3 @@ int _sqrt_recursion(int n)
 {
 	return (root_square(n, 1));
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 73bd9cc0a5a5890623b24d6a3f3dcb51a410a06e
