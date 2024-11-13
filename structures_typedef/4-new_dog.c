@@ -3,9 +3,18 @@
 #include <string.h>
 #include "dog.h"
 
+/**
+ * new_dog - create a new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: copy of dog
+*/
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *copy_dog;
+
 	copy_dog = (dog_t *)malloc(sizeof(dog_t));
 
 	if (copy_dog == NULL)
@@ -28,8 +37,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	copy_dog->name = strcpy(copy_dog->name, name);
-	copy_dog->owner = strcpy(copy_dog->owner, owner);
+	strcpy(copy_dog->name, name);
+	strcpy(copy_dog->owner, owner);
 
 	copy_dog->age = age;
 
