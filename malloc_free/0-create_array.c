@@ -1,7 +1,10 @@
 #include <stdlib.h>
 
 /**
- *
+ * create_array - create an array of char
+ * @size: size of the array
+ * @c: char int the array
+ * Return: NULL if size 0, array empty, else return array
 */
 
 char *create_array(unsigned int size, char c)
@@ -18,5 +21,5 @@ char *create_array(unsigned int size, char c)
 	for (i = 0; i < size; i++)
 		array[i] = c;
 
-	return array;
+	return (array);
 }
