@@ -1,7 +1,9 @@
 #include <stdlib.h>
 
 /**
- *
+ * malloc_checked - code check
+ * @b: int checked
+ * Return: void
 */
 
 void *malloc_checked(unsigned int b)

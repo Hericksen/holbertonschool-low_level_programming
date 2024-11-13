@@ -1,7 +1,11 @@
 #include <stdlib.h>
 
 /**
- *
+ * string_nconcat - concatenates 2 strings
+ * @s1: 1st string
+ * @s2: 2n string
+ * @n: number of n bytes of s2
+ * Return: NULL if empty strings, else return pointer of string
 */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -33,13 +37,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (result == NULL)
 		return (NULL);
 	/* Copy s1 into the result string */
-	for (i = 0; i < len1; i ++)
+	for (i = 0; i < len1; i++)
 		result[i] = s1[i];
 	/* Copy the 1st n bytes of s2 into the result string */
 	for (j = 0; j < n; j++)
 		result[i + j] = s2[j];
-	
+
 	result[i + j] = '\0';
 
-	return result;
+	return (result);
 }
