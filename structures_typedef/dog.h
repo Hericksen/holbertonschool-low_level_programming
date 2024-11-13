@@ -1,3 +1,6 @@
+#ifndef _struct
+#define _struct
+
 #include <stdlib.h>
 
 /**
@@ -18,3 +21,4 @@ typedef dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+#endif
