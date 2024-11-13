@@ -4,7 +4,7 @@
 /**
  * free_dog - free structure dog
  * @d : dog structure
- * Return: void 
+ * Return: void
 */
 
 void free_dog(dog_t *d)
