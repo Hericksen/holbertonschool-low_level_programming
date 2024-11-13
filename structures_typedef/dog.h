@@ -1,4 +1,12 @@
 #include <stdlib.h>
+
+/**
+ * struct dog - structure of dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ * Description: form of a dog
+*/
 struct dog
 {
 	char *name;
