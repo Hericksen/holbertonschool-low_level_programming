@@ -4,7 +4,8 @@
 
 /**
  * print_dog - print the dog struct
- * @d: pointer to dog struct
+ * * @d: pointer to dog struct
+ * Return: void
 */
 
 void print_dog(struct dog *d)
@@ -15,4 +16,6 @@ void print_dog(struct dog *d)
 		printf("Age: %f\n", d->age);
 		printf("Owner : %s\n", d->owner ? d->owner : "(nil)");
 	}
+	else
+		return;
 }
