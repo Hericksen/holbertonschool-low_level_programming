@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
 	}
 
 	/* Check if division/modulo by 0 */
-	if ((argv[2][0] == '/' || argv [2][0] == '%') && num 2 == 0)
+	if ((argv[2][0] == '/' || argv [2][0] == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		return (100);
 	}
 
-	result = operation(num1, num2); /* Do the operation */
+	result = op(num1, num2); /* Do the operation */
 	printf("%d\n", result); /* Print the result */
 
 	return (0);
