@@ -53,6 +53,7 @@ void print_string(va_list ap)
 
 void print_all(const char * const format, ...)
 {
+	/* Associate each character of format to a print function of types[] */
 	print_type types[] = {
 		{"c", print_char},
 		{"i", print_integer},
@@ -60,27 +61,35 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
+
 	va_list ap;
 	char *separator = "";
 	int i = 0;
 	int j = 0;
 
+	/* Init list of variadic args with format as the last fix arg */
 	va_start(ap, format);
+
+	/* Run throw every character of format */
 	while (format && format[i])
 	{
 		while (types[j].type)
 		{
+			/*For each character check in type the right function*/
 			if (*types[j].type == format[i])
 			{
+				/* Print a separator and call right fnc */
 				printf("%s", separator);
 				types[j].f(ap);
 				separator = ", ";
 			}
 			++j;
 		}
-		j = 0;
+
+		j = 0; /* Reset to check next character */
 		++i;
 	}
-	printf("\n");
-	va_end(ap);
+
+	va_end(ap); /* Cleans list of variadic arg */
+	printf("\n"); /* Prints a new line */
 }

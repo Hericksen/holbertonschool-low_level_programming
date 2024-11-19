@@ -10,8 +10,8 @@
 
 typedef struct print
 {
-	char *type;
-	void (*f)(va_list ap);
+	char *type; /* Type to print (e.g. "c", "i", "f", "s") */
+	void (*f)(va_list ap); /* Pointer function to the right function*/
 } print_type;
 
 int sum_them_all(const unsigned int n, ...);
