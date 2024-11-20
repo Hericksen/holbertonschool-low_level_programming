@@ -1,6 +1,12 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * print_numbers - Prints numbers
+ * @separator: Separator
+ * @n: Number of params
+ */
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args; /* Declare a var for the variadic arg list */

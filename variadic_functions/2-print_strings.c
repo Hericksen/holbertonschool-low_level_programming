@@ -2,9 +2,10 @@
 #include <stdarg.h>
 
 /**
- *
+ * print_strings - Prints strings
+ * @separator: Separator
+ * @n: n elements of string
 */
-
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
