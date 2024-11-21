@@ -3,7 +3,9 @@
 #include "3-calc.h"
 
 /**
- *
+ * get_op_func - function to check op
+ * @s: operator
+ * Return: Proper operator
 */
 
 int (*get_op_func(char *s))(int, int)
