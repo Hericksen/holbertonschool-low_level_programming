@@ -7,20 +7,17 @@
 
 void free_list(list_t *head)
 {
-	list_t *current;
 	list_t *next_node;
 
-	current = head;
-
-	while (current != NULL)
+	while (head != NULL)
 	{
 		/* Save the next node */
-		next_node = current->next;
+		next_node = head->next;
 		/* Free the dynamically allocated string */
-		free(current->str);
+		free(head->str);
 		/* Free the current node */
-		free(current);
+		free(head);
 		/* Move to the next node */
-		current = next_node;
+		head = next_node;
 	}
 }
