@@ -13,6 +13,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *temp;
 	unsigned int length = 0;
 
+
+	while (str[length])
+		length++;
+
 	/* Allocate memory for the new node */
 	new_node = malloc(sizeof(list_t));
 
@@ -27,9 +31,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
-	
-	while (str[length])
-		length++;
+
 
 	new_node->next = NULL;
 
