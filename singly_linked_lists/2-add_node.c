@@ -11,16 +11,17 @@ list_t *add_node(list_t **head, const char *str)
 {
 	/* Allocate memory for the new node */
 	list_t *new_node = malloc(sizeof(list_t));
-	unsigned int length;
+	unsigned int length = 0;
 
-	while (str[length])
-		length++;
+
 	if (head == NULL || new_node == NULL)
 		return (NULL);
 
 	/* Duplicate the input string */
 	new_node->str = strdup(str);
 
+	while (str[length])
+		length++;
 	/* Compute the length of the string */
 	new_node->len = length;
 
