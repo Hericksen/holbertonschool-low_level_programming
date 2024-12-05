@@ -25,14 +25,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	/* Duplicate the string and set the values for the new node */
 	new_node->str = strdup(str);
-
-	if (new_node->str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-
+	new_node->len = length;
 	new_node->next = NULL;
 
 	/* If the list is empty, make the new node the head */
