@@ -12,27 +12,18 @@ list_t *add_node(list_t **head, const char *str)
 	/* Allocate memory for the new node */
 	list_t *new_node = malloc(sizeof(list_t));
 
-	if (head == NULL)
-		return (NULL);
-
-
-	if (new_node == NULL)
+	if (head == NULL || new_node == NULL)
 		return (NULL);
 
 	/* Duplicate the input string */
 	new_node->str = strdup(str);
-
-	if (new_node->str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
 
 	/* Compute the length of the string */
 	new_node->len = strlen(str);
 
 	/* Insert the new node at the beginning of the list */
 	new_node->next = *head;
+
 	*head = new_node;
 
 	return (new_node);
