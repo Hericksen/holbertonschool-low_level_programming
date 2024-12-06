@@ -20,8 +20,10 @@ list_t *add_node(list_t **head, const char *str)
 	/* Duplicate the input string */
 	new_node->str = strdup(str);
 
+	/* Increase a length variable because we can't use strlen function */
 	while (str[length])
 		length++;
+
 	/* Compute the length of the string */
 	new_node->len = length;
 
