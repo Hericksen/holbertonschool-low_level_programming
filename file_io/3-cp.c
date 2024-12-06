@@ -5,15 +5,15 @@
 #include <unistd.h>
 
 /**
- * main - Copies the content of a file to another file.
+ * main - Copies content of a file to another.
  * @argc: Number of arguments.
  * @argv: Array of arguments.
  *
- * Return: 0 on success, exits with error codes on failure.
+ * Return: 0 on success, exit with error codes on failure.
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, num, bytes_written;
+	int file_from, file_to, num, written;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -21,10 +21,9 @@ int main(int argc, char *argv[])
 
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
 		exit(98);
-	}
+
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
@@ -32,11 +31,12 @@ int main(int argc, char *argv[])
 
 	while ((num = read(file_from, buffer, 1024)) > 0)
 	{
-		bytes_written = write(file_to, buffer, num);
-		if (bytes_written != num) /* Ensure all bytes are written correctly */
+		written = write(file_to, buffer, num);
+		if (written != num)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 			close(file_from), close(file_to), exit(99);
 	}
+
 	if (num == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
 		close(file_from), close(file_to), exit(98);
