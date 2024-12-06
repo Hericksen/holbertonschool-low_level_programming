@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t bytes_read; /* Number of bytes read from the file */
 	ssize_t bytes_written; /* Number of bytes written to STDOUT */
 	char *buffer; /* Buffer to store file content */
- 
+
 	if (filename == NULL) /* Check if filename is NULL */
 		return (0);
 	fd = open(filename, O_RDONLY); /* Open the file in read-only mode */
