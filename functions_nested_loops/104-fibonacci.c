@@ -5,14 +5,14 @@
  */
 int main ()
 {
-    unsigned int first_high = 0, first_low = 1;
-    unsigned int second_high = 0, second_low = 2;
-    unsigned int next_high, next_low;
+    unsigned long int first_high = 0, first_low = 1;
+    unsigned long int second_high = 0, second_low = 2;
+    unsigned long int next_high, next_low;
     int count = 98, i;
 
-    printf("%u, %u", first_low,first_high);
+    printf("%lu, %lu", first_low, second_low);
 
-    for (i = 0; i <= count; i++)
+    for (i = 3; i <= count; i++)
     {
         next_low = first_low + second_low;
         next_high = first_high + second_high;
@@ -20,7 +20,7 @@ int main ()
             if(next_low < first_low)
                 next_high++;
         
-        printf(", %u", next_low);
+        printf(", %lu", next_low);
 
         first_low = second_low;
         first_high = second_high;
@@ -28,5 +28,6 @@ int main ()
         second_high = next_high;
     }
     printf("\n");
+    
     return(0);
 }
