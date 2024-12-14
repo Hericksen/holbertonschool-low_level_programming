@@ -2,13 +2,13 @@
 
 int main() {
     int count = 50;
-    unsigned long long first = 1, second = 2, next;
-    int i;
-    printf("%llu, %llu", first, second);
+    int first = 1, second = 2, next;
 
-    for (i = 3; i <= count; i++) {
+    printf("%d, %d", first, second);
+
+    for (int i = 3; i <= count; i++) {
         next = first + second;
-        printf(", %llu", next);
+        printf(", %d", next);
         first = second;
         second = next;
     }
