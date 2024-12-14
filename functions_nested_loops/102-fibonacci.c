@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int first = 1, second = 2, next, count = 0;
+    int count = 50;
+    unsigned long long first = 1, second = 2, next;
+    int i;
+    printf("%llu, %llu", first, second);
 
-    printf("%d, %d", first, second); 
-
-    for (count = 2; count < 50; count++) {
+    for (i = 3; i <= count; i++) {
         next = first + second;
-        printf(", %d", next);
+        printf(", %llu", next);
         first = second;
         second = next;
     }
 
     printf("\n");
-
     return 0;
 }
