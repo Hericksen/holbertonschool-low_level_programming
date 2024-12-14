@@ -2,13 +2,14 @@
 
 int main() {
     int count = 50;
-    int first = 1, second = 2, next;
+    long int first = 1, second = 2, next;
     int i = 0;
-    printf("%d, %d", first, second);
+
+    printf("%ld, %ld", first, second);
 
     for (i = 3; i <= count; i++) {
         next = first + second;
-        printf(", %d", next);
+        printf(", %ld", next);
         first = second;
         second = next;
     }
